@@ -8,3 +8,9 @@ body{
 	color: white;
 	font-family: Monospace,Helvetica,Arial;
 }
+#dados{
+	background-color: #000000;
+	border:0;
+	color: white;
+	outline:none;
+}
