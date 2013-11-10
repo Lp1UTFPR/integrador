@@ -1,0 +1,13 @@
+/*formatacao*/
+h2{
+	color:#E24D00;
+}
+
+#conteudo p{
+	text-align: justify;
+}
+
+#img_porque_usar_unix{
+	text-align: center; /*para centralizar banner*/
+	padding-top: 30px;
+}
