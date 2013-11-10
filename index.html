@@ -6,12 +6,24 @@
 		
 		<link href="cssBase.css" rel="stylesheet" type="text/css">
 		<link href="cssFormatacao.css" rel="stylesheet" type="text/css">
+
+		<script type="text/javascript">
+			function data_hora(){
+				var data = new Date();
+				document.getElementById("data_hora").innerHTML = data;
+				setTimeout("data_hora()", 1);
+			}
+
+			window.onload = function(){
+				data_hora();
+			}
+		</script>
 	</head>
 	<body>		
 		<div id="conteiner">
 			<div id="topo">
-				<a href="principio.html"><img src="imagens/btn_close.png"></a>
-				Unix 1.0
+				<div id="nome_so" onclick="document.location.href='principio.html';">Unix 1.0</div>
+				<div id="data_hora"></div>
 			</div>
 
 			<div id="menu_left">
@@ -51,13 +63,15 @@
 		</div>
 		
 		<div id="rodape">
-			<div>
+			<div id="autores">
 				<h4>Autores e Desenvolvedores</h4>
 				<div>Rodrigo Miss</div>
 				<div>Gustavo</div>
 				<div>André</div>
 				<div>Lucas</div>
 			</div>
+
+			<div id="logo_utfpr"><img src="imagens/logo-tsi.png"></div>
 		</div>
 	</body>
 </html>
