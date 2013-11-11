@@ -50,3 +50,32 @@ $(document).ready(function(){
   })
 });
 })(jQuery)
+function comando(){
+  var novocampo = document.getElementById("novocampo");
+  var mensagem;
+  if( event.keyCode == 13)
+  {
+    if((document.getElementById("dados").value=="ls") || (document.getElementById("dados").value=="LS" )) 
+      mensagem="<a href='desktop.html'>Desktop</a><br><a href='index.html'>index.html</a>";
+    else if((document.getElementById("dados").value=="clear") || (document.getElementById("dados").value=="CLEAR" )) 
+    {
+      mensagem="";
+      window.location.reload(); 
+    }
+    else if (document.getElementById("dados").value=='')
+      mensagem=" ";
+    else if (document.getElementById("dados").value=='exit')
+    {
+      window.close('#');
+    }
+    else
+      mensagem="comando não encontrado.";
+    document.body.onkeypress = comando;
+    novocampo.innerHTML = mensagem;
+  }
+
+}
+function SetFocus(elementToFocus)
+{
+  document.getElementById(elementToFocus).focus();
+}

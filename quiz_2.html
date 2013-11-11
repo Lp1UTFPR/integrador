@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<meta name="name" content="content">
+		<title>Unix - O pai de todos os Sistemas Operacionais</title>
+		
+		<link href="css/estilo.css" rel="stylesheet" type="text/css">
+
+		<script type="text/javascript">
+			function data_hora(){
+				var data = new Date();
+				document.getElementById("data_hora").innerHTML = data;
+				setTimeout("data_hora()", 1);
+			}
+
+			window.onload = function(){
+				data_hora();
+			}
+		</script>
+	</head>
+	<body>		
+		<div id="conteiner">
+			<div id="topo">
+				<div id="nome_so" onclick="document.location.href='principio.html';">Unix 1.0</div>
+				<div id="data_hora"></div>
+			</div>
+
+			<div id="menu_left">
+				<div id="unix_logo"><img src="imagens/logo-menu-unix.jpg" width="50%" ></div>
+
+				<ul>
+					<li>
+						<a href="artigo falta html.pdf" target="_blank"><img src="imagens/ler.jpg" width="17%"><h4>Artigo Unix</a></h4>
+						<div>Leia um bom artigo sobre Unix, HTML5 e CSS.</div>
+					</li>
+ 					<li>
+						<img src="imagens/quiz.jpg" width="26%"><h4>Quiz</h4>
+						<div>Teste seus conhecimentos com nosso Quiz.</div>
+					</li>
+					<li>
+						<img src="imagens/recomendar.png" width="22%"><h4>Recomendações</h4>
+						<div>Vale a pena conferir nossa lista de recomendações.</div>
+					</li>
+					<li>
+						<img src="imagens/download-unix.jpg" width="22%"><h4>Use Unix</h4>
+						<div>Baixe agora mesmo o Unix.</div>
+					</li>
+				</ul>
+			</div>
+
+			<div id="conteudo_quiz">
+				<table id="quiz">
+					<caption><h2>Teste Seu Conhecimento Sobre o Unix</h2></caption>
+					<thead>
+						<tr>
+							<th>Somente uma alternativa de cada pergunta </th>
+						</tr>
+					</thead>
+					<tbody>
+						<div id="pergunta_1">
+							<tr><td><b>1.Qual foi a primeira linguagem em que o sistema UNIX foi escrita?</b></td></tr>
+							<tr>
+								<td><INPUT type="radio" NAME="quiz_1" VALUE="assembly">Assembly</td>
+							</tr>
+							<tr>
+								<td><INPUT type="radio" NAME="quiz_1" VALUE="b">lingugem B</td>
+							</tr>
+							<tr>
+								<td><INPUT type="radio" NAME="quiz_1" VALUE="c">Linguagem C</td>
+							</tr>
+							<tr>
+								<td><INPUT type="radio" NAME="quiz_1" VALUE="pascal">Pascal</td>
+							</tr>
+							<tr>
+								<td><INPUT type="radio" NAME="quiz_1" VALUE="java">Java</td>
+							</tr>
+						</div>
+						<div id="pergunta_2">
+							<tr><td><b>2.Qual a forma de escalonamento de processos no UNIX nas releases mais recentes?</b></td></tr>
+							<tr>
+								<td><INPUT type="radio" NAME="quiz_2" VALUE="fcfs">FCFS</td>
+							</tr>
+							<tr>
+								<td><INPUT type="radio" NAME="quiz_2" VALUE="sjf">SJF</td>
+							</tr>
+							<tr>
+								<td><INPUT type="radio" NAME="quiz_2" VALUE="rr">ROUND ROBIN</td>
+							</tr>
+							<tr>
+								<td><INPUT type="radio" NAME="quiz_2" VALUE="sjf_p">SJF com Prioridade</td>
+							</tr>
+							<tr>
+								<td><INPUT type="radio" NAME="quiz_2" VALUE="cp">Circular com Prioridade</td>
+							</tr>
+						</div>
+						<div id="pergunta_3">
+							<tr><td><b>3.Qual é o nome da versao open source do UNIX?</b></td></tr>
+							<tr>
+								<td><INPUT type="radio" NAME="quiz_3" VALUE="sbd">SBD</td>
+							</tr>
+							<tr>
+								<td><INPUT type="radio" NAME="quiz_3" VALUE="sbs">SBS</td>
+							</tr>
+							<tr>
+								<td><INPUT type="radio" NAME="quiz_3" VALUE="bsd">BSD</td><!--verdadeira-->
+							</tr>
+							<tr>
+								<td><INPUT type="radio" NAME="quiz_3" VALUE="bds">BDS</td>
+							</tr>
+							<tr>
+								<td><INPUT type="radio" NAME="quiz_3" VALUE="bdc">BDC</td>
+							</tr>
+						</div>
+						<div id="pergunta_4">
+							<tr><td><b>4.Qual o utilitario que permite a interpretação de comandos?</b></td></tr>
+							<tr>
+								<td><INPUT type="radio" NAME="quiz_4" VALUE="terminal">Terminal</td>
+							</tr>
+							<tr>
+								<td><INPUT type="radio" NAME="quiz_4" VALUE="shell">Shell</td>
+							</tr>
+							<tr>	
+								<td><INPUT type="radio" NAME="quiz_4" VALUE="kernel">Kernel</td>
+							</tr>
+							<tr>
+								<td><INPUT type="radio" NAME="quiz_4" VALUE="daemon">Daemon</td>
+							</tr>
+							<tr>
+								<td><INPUT type="radio" NAME="quiz_4" VALUE="system_calls">System Calls</td>
+							</tr>
+						</div>
+						<div id="pergunta_5">
+							<tr><td><b>5.Qual empresa é a detentora do sistema UNIX privado?</b></td></tr>
+							<tr>
+								<td><INPUT type="radio" NAME="quiz_5" VALUE="bells">Bells</td>
+							</tr>
+							<tr>
+								<td><INPUT type="radio" NAME="quiz_5" VALUE="atet">AT&T</td>
+							</tr>
+							<tr>
+								<td><INPUT type="radio" NAME="quiz_5" VALUE="ge">General Eletrics</td>
+							</tr>
+							<tr>
+								<td><INPUT type="radio" NAME="quiz_5" VALUE="mit">MIT</td>
+							</tr>
+							<tr>
+								<td><INPUT type="radio" NAME="quiz_5" VALUE="berckley">Berckley</td>
+							</tr>
+						</div>
+					</tbody>
+					<tfoot>
+						<tr><td><input type="text" placeholder="Digite seu nome"><input type="submit" onclick="quiz();"></td></tr>
+					</tfoot>
+				</table>
+			</div>
+		</div>
+		
+		<div id="rodape">
+			<div id="autores">
+				<h4>Autores e Desenvolvedores</h4>
+				<div>Rodrigo Miss</div>
+				<div>Gustavo</div>
+				<div>André</div>
+				<div>Lucas</div>
+			</div>
+
+			<div id="logo_utfpr"><img src="imagens/logo-tsi.png"></div>
+		</div>
+	</body>
+</html>
