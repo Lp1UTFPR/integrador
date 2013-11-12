@@ -2,7 +2,7 @@
 <html lang="pt-br">
 	<head>
 		<meta charset="utf-8">
-		<title>Unix - O pai de todos os Sistemas Operacionais</title>
+		<title>Quiz</title>
 		
 		<link href="css/estilo.css" rel="stylesheet" type="text/css">
 		<script type="text/javascript">
@@ -14,6 +14,13 @@
 
 			window.onload = function(){
 				data_hora();
+			}
+
+			function iniciar_quiz(){
+				var header_quiz = document.getElementById("header_quiz");
+				var nome = document.getElementById("nome_usuario").value;
+
+				header_quiz.innerHTML = "<h2>#Quiz</h2>Nome: " + nome + " respondendo ...";
 			}
 		</script>
 	</head>
@@ -29,17 +36,12 @@
 
 				<ul>
 					<li>
-						<a href="artigo falta html.pdf" target="_blank"><img src="imagens/ler.jpg" width="17%"><h4>Artigo Unix</a></h4>
+						<img src="imagens/ler.jpg" width="17%"><h4>Artigo Unix</h4>
 						<div>Leia um bom artigo sobre Unix, HTML5 e CSS.</div>
 					</li>
  					<li>
-<<<<<<< HEAD
-						<a href="quiz.html"><img src="imagens/quiz.jpg" width="26%"><h4>Quiz</h4>
-						<div>Teste seus conhecimentos com nosso Quiz.</div></a>
-=======
 						<a href="quiz.html"></abbr><img src="imagens/quiz.jpg" width="26%"><h4>Quiz</a></h4>
 						<div>Teste seus conhecimentos com nosso Quiz.</div>
->>>>>>> 3c33c9a55eceda09a2aa10eee13699909ac3594b
 					</li>
 					<li>
 						<img src="imagens/recomendar.png" width="22%"><h4>Recomendações</h4>
@@ -53,15 +55,11 @@
 			</div>
 
 			<div id="conteudo">
-				<h2>O que é Unix?</h2>
-				<p>É o pai de quase todos os sistemas operacionais!
-				<p>Unix é um sistema operacional criado por Kenneth Thompson, e foi o primeiro sistema a introduzir conceitos muito importantes para SOs como suporte a multiusuários, multitarefas e portabilidade.
-				<p>Além disso, o Unix suporta tanto alterações por linhas de comando, que dão mais flexibilidade e precisão ao usuário, quanto definições via interface gráfica, uma opção normalmente mais prática e menos trabalhosa do que a anterior.
-
-				<h2>Porque usar Unix?</h2>
-				É rápido, seguro, fácil de instalar e utilizar, portável e é livre!
-				<div id="img_porque_usar_unix"><img src="imagens/banner-porque-usar-unix.png" width="50%"></div>
-				<a href="#">Leia mais ...</a>
+				<div id="header_quiz">
+					<h2>#Quiz</h2>
+					<label>Seu nome: <input type="text" class="textbox" id="nome_usuario"></label>
+					<input type="button" value="Iniciar" onclick="iniciar_quiz();">
+				</div>
 			</div>
 		</div>
 		

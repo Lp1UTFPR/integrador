@@ -72,6 +72,11 @@ body{
 	color: #332323;
 }	
 
+#menu_left a{
+	text-decoration: none;
+	color: #332323;
+}
+
 #conteudo{
 	background: #fff;
 	width: 660px;				
@@ -123,6 +128,7 @@ h2{
 	text-align: center; /*para centralizar banner*/
 	padding-top: 30px;
 }
+<<<<<<< HEAD
 /*********************terminal*********************/
 #pagina_total{
 	text-align: center;
@@ -152,4 +158,20 @@ h2{
 }
 #titulo_perguntas2{
 	margin-left: 15%;
+=======
+
+.textbox{
+	width: 300px;
+}
+
+#header_quiz{
+	margin-top: 6px;	
+	background: #f3f3f3;
+	border-radius: 5px;
+	padding: 20px;
+}
+
+#header_quiz h2{
+	margin-top: 0;
+>>>>>>> 3c33c9a55eceda09a2aa10eee13699909ac3594b
 }
