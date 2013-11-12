@@ -143,5 +143,13 @@ h2{
 #conteudo_quiz{
 	background: url(../imagens/quiz_fundo.jpg)no-repeat top;
 
-
+}
+#perguntas{
+	float: left;
+}
+#titulo_perguntas1{
+	margin-left: 20%;
+}
+#titulo_perguntas2{
+	margin-left: 15%;
 }

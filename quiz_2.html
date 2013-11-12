@@ -6,7 +6,7 @@
 		<title>Unix - O pai de todos os Sistemas Operacionais</title>
 		
 		<link href="css/estilo.css" rel="stylesheet" type="text/css">
-
+		
 		<script type="text/javascript">
 			function data_hora(){
 				var data = new Date();
@@ -16,7 +16,6 @@
 
 			window.onload = function(){
 				data_hora();
-			}
 		</script>
 	</head>
 	<body>		
@@ -50,112 +49,52 @@
 			</div>
 
 			<div id="conteudo_quiz">
-				<table id="quiz">
-					<caption><h2>Teste Seu Conhecimento Sobre o Unix</h2></caption>
-					<thead>
-						<tr>
-							<th>Somente uma alternativa de cada pergunta </th>
-						</tr>
-					</thead>
-					<tbody>
-						<div id="pergunta_1">
-							<tr><td><b>1.Qual foi a primeira linguagem em que o sistema UNIX foi escrita?</b></td></tr>
-							<tr>
-								<td><INPUT type="radio" NAME="quiz_1" VALUE="assembly">Assembly</td>
-							</tr>
-							<tr>
-								<td><INPUT type="radio" NAME="quiz_1" VALUE="b">lingugem B</td>
-							</tr>
-							<tr>
-								<td><INPUT type="radio" NAME="quiz_1" VALUE="c">Linguagem C</td>
-							</tr>
-							<tr>
-								<td><INPUT type="radio" NAME="quiz_1" VALUE="pascal">Pascal</td>
-							</tr>
-							<tr>
-								<td><INPUT type="radio" NAME="quiz_1" VALUE="java">Java</td>
-							</tr>
-						</div>
-						<div id="pergunta_2">
-							<tr><td><b>2.Qual a forma de escalonamento de processos no UNIX nas releases mais recentes?</b></td></tr>
-							<tr>
-								<td><INPUT type="radio" NAME="quiz_2" VALUE="fcfs">FCFS</td>
-							</tr>
-							<tr>
-								<td><INPUT type="radio" NAME="quiz_2" VALUE="sjf">SJF</td>
-							</tr>
-							<tr>
-								<td><INPUT type="radio" NAME="quiz_2" VALUE="rr">ROUND ROBIN</td>
-							</tr>
-							<tr>
-								<td><INPUT type="radio" NAME="quiz_2" VALUE="sjf_p">SJF com Prioridade</td>
-							</tr>
-							<tr>
-								<td><INPUT type="radio" NAME="quiz_2" VALUE="cp">Circular com Prioridade</td>
-							</tr>
-						</div>
-						<div id="pergunta_3">
-							<tr><td><b>3.Qual é o nome da versao open source do UNIX?</b></td></tr>
-							<tr>
-								<td><INPUT type="radio" NAME="quiz_3" VALUE="sbd">SBD</td>
-							</tr>
-							<tr>
-								<td><INPUT type="radio" NAME="quiz_3" VALUE="sbs">SBS</td>
-							</tr>
-							<tr>
-								<td><INPUT type="radio" NAME="quiz_3" VALUE="bsd">BSD</td><!--verdadeira-->
-							</tr>
-							<tr>
-								<td><INPUT type="radio" NAME="quiz_3" VALUE="bds">BDS</td>
-							</tr>
-							<tr>
-								<td><INPUT type="radio" NAME="quiz_3" VALUE="bdc">BDC</td>
-							</tr>
-						</div>
-						<div id="pergunta_4">
-							<tr><td><b>4.Qual o utilitario que permite a interpretação de comandos?</b></td></tr>
-							<tr>
-								<td><INPUT type="radio" NAME="quiz_4" VALUE="terminal">Terminal</td>
-							</tr>
-							<tr>
-								<td><INPUT type="radio" NAME="quiz_4" VALUE="shell">Shell</td>
-							</tr>
-							<tr>	
-								<td><INPUT type="radio" NAME="quiz_4" VALUE="kernel">Kernel</td>
-							</tr>
-							<tr>
-								<td><INPUT type="radio" NAME="quiz_4" VALUE="daemon">Daemon</td>
-							</tr>
-							<tr>
-								<td><INPUT type="radio" NAME="quiz_4" VALUE="system_calls">System Calls</td>
-							</tr>
-						</div>
-						<div id="pergunta_5">
-							<tr><td><b>5.Qual empresa é a detentora do sistema UNIX privado?</b></td></tr>
-							<tr>
-								<td><INPUT type="radio" NAME="quiz_5" VALUE="bells">Bells</td>
-							</tr>
-							<tr>
-								<td><INPUT type="radio" NAME="quiz_5" VALUE="atet">AT&T</td>
-							</tr>
-							<tr>
-								<td><INPUT type="radio" NAME="quiz_5" VALUE="ge">General Eletrics</td>
-							</tr>
-							<tr>
-								<td><INPUT type="radio" NAME="quiz_5" VALUE="mit">MIT</td>
-							</tr>
-							<tr>
-								<td><INPUT type="radio" NAME="quiz_5" VALUE="berckley">Berckley</td>
-							</tr>
-						</div>
-					</tbody>
-					<tfoot>
-						<tr><td><input type="text" placeholder="Digite seu nome"><input type="submit" onclick="quiz();"></td></tr>
-					</tfoot>
-				</table>
+			<div id="perguntas">
+				<h2 id="titulo_perguntas1"><b>Teste Seu Conhecimento Sobre o Unix</b></h2>
+					   <h3 id="titulo_perguntas2">Somente uma alternativa de cada pergunta está correta!</h3></br>
+					<div id="pergunta_1">
+						<b>1.Qual foi a primeira linguagem em que o sistema UNIX foi escrita?</b></br>
+							<INPUT type="radio" id="_1" name="quiz_1" VALUE="assembly">Assembly</br><!--verdadeira-->
+							<INPUT type="radio" id="_1" name="quiz_1" VALUE="b">lingugem B</br>
+							<INPUT type="radio" id="_1" name="quiz_1" VALUE="c">Linguagem C</br>
+							<INPUT type="radio" id="_1" name="quiz_1" VALUE="pascal">Pascal</br>
+							<INPUT type="radio" id="_1" name="quiz_1" VALUE="java">Java</br>
+					</div>
+					<div id="pergunta_2">
+							</br><b>2.Qual a forma de escalonamento de processos no UNIX nas releases mais recentes?</b></br>
+								<INPUT type="radio" id="_2" name="quiz_2" VALUE="fcfs">FCFS</br>
+								<INPUT type="radio" id="_2" name="quiz_2" VALUE="sjf">SJF</br>
+								<INPUT type="radio" id="_2" name="quiz_2" VALUE="rr">Round Robin</br>
+								<INPUT type="radio" id="_2" name="quiz_2" VALUE="sjf_p">SJF com Prioridade</br>
+								<INPUT type="radio" id="_2" name="quiz_2" VALUE="cp">Round Robin com Prioridade</br><!--verdadeira-->
+					</div>
+					<div id="pergunta_3">
+							</br><b>3.Qual é o nome da versao open source do UNIX?</b></br>
+								<INPUT type="radio" id="_3" name="quiz_3" VALUE="sbd">SBD</br>
+								<INPUT type="radio" id="_3" name="quiz_3" VALUE="sbs">SBS</br>
+								<INPUT type="radio" id="_3" name="quiz_3" VALUE="bsd">BSD</br><!--verdadeira-->
+								<INPUT type="radio" id="_3" name="quiz_3" VALUE="bds">BDS</br>
+								<INPUT type="radio" id="_3" name="quiz_3" VALUE="bdc">BDC</br>
+					</div>
+					<div id="pergunta_4">
+							</br><b>4.Qual o utilitario que permite a interpretação de comandos?</b></br>
+								<INPUT type="radio" id="_4" name="quiz_4" VALUE="terminal">Terminal</br>
+							    <INPUT type="radio" id="_4" name="quiz_4" VALUE="shell">Shell</br><!--verdadeira-->
+								<INPUT type="radio" id="_4" name="quiz_4" VALUE="kernel">Kernel</br>
+						        <INPUT type="radio" id="_4" name="quiz_4" VALUE="daemon">Daemon</br>
+								<INPUT type="radio" id="_4" name="quiz_4" VALUE="system_calls">System Calls</br>
+					</div>
+					<div id="pergunta_5">
+							</br><b>5.Qual empresa é a detentora do sistema UNIX privado?</b></br>
+								<INPUT type="radio" id="_5" name="quiz_5" VALUE="bells">Bells</br>
+								<INPUT type="radio" id="_5" name="quiz_5" VALUE="atet">AT&T</br><!--verdadeira-->
+								<INPUT type="radio" id="_5" name="quiz_5" VALUE="ge">General Eletrics</br>
+								<INPUT type="radio" id="_5" name="quiz_5" VALUE="mit">MIT</br>
+								<INPUT type="radio" id="_5" name="quiz_5" VALUE="berckley">Berckley</br>
+					</div>
+				</br><input type="text" placeholder="Digite seu nome"><input type="submit" value="Verificar" onclick="quiz();">
 			</div>
 		</div>
-		
 		<div id="rodape">
 			<div id="autores">
 				<h4>Autores e Desenvolvedores</h4>
@@ -169,3 +108,4 @@
 		</div>
 	</body>
 </html>
+
