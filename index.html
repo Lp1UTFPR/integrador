@@ -6,14 +6,14 @@
 		
 		<link href="css/estilo.css" rel="stylesheet" type="text/css">
 		<script type="text/javascript">
-			function data_hora(){
-				var data = new Date();
-				document.getElementById("data_hora").innerHTML = data;
-				setTimeout("data_hora()", 1);
+			function print_barra_status(){
+				var data_hora = new Date();
+				document.getElementById("barra_status").innerHTML = data_hora;
+				setTimeout("print_barra_status()", 1);
 			}
 
 			window.onload = function(){
-				data_hora();
+				print_barra_status();
 			}
 		</script>
 	</head>
@@ -21,7 +21,7 @@
 		<div id="conteiner">
 			<div id="topo">
 				<div id="nome_so" onclick="document.location.href='principio.html';">Unix 1.0</div>
-				<div id="data_hora"></div>
+				<div id="barra_status"></div>
 			</div>
 
 			<div id="menu_left">

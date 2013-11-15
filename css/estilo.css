@@ -1,4 +1,4 @@
-/*layout*/
+/*layout global*/
 body{
 	margin: 0px;
 	background: #6e6e6e;
@@ -22,7 +22,7 @@ body{
 	cursor: pointer;
 }
 
-#topo #data_hora{
+#topo #barra_status{
 	width: 775px;
 	float: right;
 	height: 20px;
@@ -67,6 +67,7 @@ body{
 	padding-left: 5px;
 	color: #332323;
 }
+
 #menu_left ul li a{
 	text-decoration: none;
 	color: #332323;
@@ -78,7 +79,7 @@ body{
 }
 
 #conteudo{
-	background: #fff;
+	background: url(../imagens/quiz_fundo.jpg) no-repeat;
 	width: 660px;				
 	float: right;
 	padding-top: 4px;
@@ -128,50 +129,95 @@ h2{
 	text-align: center; /*para centralizar banner*/
 	padding-top: 30px;
 }
-<<<<<<< HEAD
+
+/********************** página quiz ***************/
+#header_quiz{
+	margin: auto;
+	margin-top: 10px;	
+	text-align: center;
+	background: #f3f3f3;
+	border-radius: 5px;
+	padding: 20px;
+	width: 350px;
+}
+
+.textbox{
+	width: 300px;
+}
+
+#perguntas{
+	visibility: hidden; /*perguntas iniciam invisivel até usuario informar seu nome*/
+}
+
+#perguntas h2, h3{
+	text-align: center;
+}
+
+.resposta_errada{
+	background: #FFE9E5; /*#E94D4D;*/
+	background-image: url(../imagens/img-erro.png);
+	background-size: 4%;
+	background-repeat: no-repeat;
+	background-position: 100% 50%;
+	border: 1px dotted #B60606;
+	width: 100%;
+	padding: 10px 0 10px
+}
+
+.resposta_certa{
+	background: #F1FAEF; /*#97CF8F;*/
+	background-image: url(../imagens/img-ok.png);
+	background-size: 4%;
+	background-repeat: no-repeat;
+	background-position: 100% 50%;
+	border: 1px dotted #527C4C;
+	width: 100%;
+	padding: 10px 0 10px;
+}
+
+#resultado_quiz{
+	position: absolute;
+}
+
+.resultado_positivo_quiz{
+	background: #F1FAEF;
+	border: 1px solid #B2DDAC;
+	width: 100%;
+	margin-top: 6px;
+	border-radius: 5px;
+	visibility: hidden;
+}
+
+.resultado_negativo_quiz{
+	background: #D47D4B;
+	border: 1px solid #634A3E;
+	width: 100%;
+	margin-top: 6px;
+	border-radius: 5px;
+	visibility: hidden;
+}
+
+#resultado_quiz div{
+	padding: 0 20px;
+}
+
 /*********************terminal*********************/
 #pagina_total{
 	text-align: center;
 	text-decoration: white;
 	color: white;
 }
+
 .terminal{
 	background-color: black;
 	color: white;
 	font-family: Monospace,Helvetica,Arial;
 }
+
 #dados{
 	background-color: #000000;
 	border:0;
 	color: white;
 	outline:none;
 }
-#conteudo_quiz{
-	background: url(../imagens/quiz_fundo.jpg)no-repeat top;
 
-}
-#perguntas{
-	float: left;
-}
-#titulo_perguntas1{
-	margin-left: 20%;
-}
-#titulo_perguntas2{
-	margin-left: 15%;
-=======
-
-.textbox{
-	width: 300px;
-}
-
-#header_quiz{
-	margin-top: 6px;	
-	background: #f3f3f3;
-	border-radius: 5px;
-	padding: 20px;
-}
-
-#header_quiz h2{
-	margin-top: 0;
->>>>>>> 3c33c9a55eceda09a2aa10eee13699909ac3594b
-}
