@@ -13,6 +13,7 @@ body{
 	font-size: 13px;
 }
 
+/*div onde é impresso o nome do SO na barra de status*/
 #topo #nome_so{
 	background: url(../imagens/btn_close.png) no-repeat;
 	padding-left: 25px;
@@ -22,6 +23,7 @@ body{
 	cursor: pointer;
 }
 
+/*Barra de status onde é impresso data_hora e outros status*/
 #topo #barra_status{
 	width: 775px;
 	float: right;
@@ -45,6 +47,7 @@ body{
 	float: left;
 }
 
+/*div onde é exibido a logo do unix*/
 #menu_left #unix_logo{
 	margin: 10px auto;
 	text-align: center; /*para centralizar logo unix*/
@@ -78,6 +81,7 @@ body{
 	color: #332323;
 }
 
+/*div para todo conteudo do site*/
 #conteudo{
 	background-color: #fff;
 	width: 660px;				
@@ -86,11 +90,6 @@ body{
 	padding-left: 10px;
 	padding-right: 10px;
 	padding-bottom: 10px;
-}
-
-.conteudo_quiz{
-	background-image: url(../imagens/quiz_fundo.jpg);
-	background-repeat: repeat-y;	
 }
 
 #rodape{
@@ -136,6 +135,12 @@ h2{
 }
 
 /********************** página quiz ***************/
+/*classe complementar do #conteudo para pagina do quiz*/
+.conteudo_quiz{
+	background-image: url(../imagens/quiz_fundo.jpg);
+	background-repeat: repeat-y;	
+}
+
 #header_quiz{
 	margin: auto;
 	margin-top: 10px;	
@@ -211,11 +216,17 @@ h2{
 	padding: 0 20px;
 }
 
+/*div que contem os botoes de proxima página, validar_quiz*/
 #btn_controle_quiz{
-	/*div que contem os botoes de proxima página, validar_quiz*/
 	margin-top: 10px;
 	text-align: center;
 }
+
+/*********************pagina de download*********************/
+#img-down-freeBsd{
+	text-align: center;
+}
+
 
 /*********************terminal*********************/
 #terminal{

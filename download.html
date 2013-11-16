@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<title>Unix - O pai de todos os Sistemas Operacionais</title>
+		
+		<link href="css/estilo.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript">
+			function print_barra_status(){
+				var data_hora = new Date();
+				document.getElementById("barra_status").innerHTML = data_hora;
+				setTimeout("print_barra_status()", 1);
+			}
+
+			window.onload = function(){
+				print_barra_status();
+			}
+		</script>
+	</head>
+	<body>		
+		<div id="conteiner">
+			<div id="topo">
+				<div id="nome_so" onclick="document.location.href='index.html';">Unix 1.0</div>
+				<div id="barra_status"></div>
+			</div>
+
+			<div id="menu_left">
+				<div id="unix_logo"><img src="imagens/logo-menu-unix.jpg" width="50%" ></div>
+
+				<ul>
+					<li>
+						<a href="artigo falta html.pdf" target="_blank"><img src="imagens/ler.jpg" width="17%"><h4>Artigo Unix</a></h4>
+						<div>Leia um bom artigo sobre Unix, HTML5 e CSS.</div>
+					</li>
+ 					<li>
+						<a href="quiz.html"><img src="imagens/quiz.jpg" width="26%"><h4><a href="quiz.html">Quiz</a></h4>
+						<div>Teste seus conhecimentos com nosso Quiz.</div></a>
+					</li>
+					<li>
+						<img src="imagens/recomendar.png" width="22%"><h4>Recomendações</h4>
+						<div>Vale a pena conferir nossa lista de recomendações.</div>
+					</li>
+					<li>
+						<img src="imagens/download-unix.jpg" width="22%"><h4>Use Unix</h4>
+						<div>Baixe agora mesmo o Unix.</div>
+					</li>
+				</ul>
+			</div>
+
+			<div id="conteudo">
+				<h2>Baixe o FreeBSD</h2>
+				<p>Nós recomendamos o sistema operacional FreeBSD!
+				<p>FreeBSD é a versão <b>gratuita do Unix</b> e possui todas as características abordadas em nosso artigo. Faça o download agora mesmo e instale em seu computador um sistema realmente leve, eficiente e seguro.
+
+				<div id="img-down-freeBsd">
+					<a href="http://www.freebsd.org/where.html" target="_blank"><img src="imagens/freebsd.jpg">
+					<div>Download</div></a>
+				</div>
+			</div>
+		</div>
+		
+		<div id="rodape">
+			<div id="autores">
+				<h4>Autores e Desenvolvedores</h4>
+				<div>Rodrigo Miss</div>
+				<div>Gustavo</div>
+				<div>André</div>
+				<div>Lucas</div>
+			</div>
+
+			<div id="logo_utfpr"><img src="imagens/logo-tsi.png"></div>
+		</div>
+	</body>
+</html>
