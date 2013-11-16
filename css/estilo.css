@@ -79,13 +79,18 @@ body{
 }
 
 #conteudo{
-	background: url(../imagens/quiz_fundo.jpg) no-repeat;
+	background-color: #fff;
 	width: 660px;				
 	float: right;
 	padding-top: 4px;
 	padding-left: 10px;
 	padding-right: 10px;
 	padding-bottom: 10px;
+}
+
+.conteudo_quiz{
+	background-image: url(../imagens/quiz_fundo.jpg);
+	background-repeat: no-repeat;	
 }
 
 #rodape{
@@ -153,6 +158,11 @@ h2{
 	text-align: center;
 }
 
+#pagina_2{
+	visibility: hidden;
+	height: 0px;	
+}
+
 .resposta_errada{
 	background: #FFE9E5; /*#E94D4D;*/
 	background-image: url(../imagens/img-erro.png);
@@ -199,6 +209,12 @@ h2{
 
 #resultado_quiz div{
 	padding: 0 20px;
+}
+
+#btn_controle_quiz{
+	/*div que contem os botoes de proxima página, validar_quiz*/
+	margin-top: 10px;
+	text-align: center;
 }
 
 /*********************terminal*********************/

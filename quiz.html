@@ -5,140 +5,7 @@
 		<title>Unix - O pai de todos os Sistemas Operacionais</title>
 		
 		<link href="css/estilo.css" rel="stylesheet" type="text/css">
-		<script type="text/javascript">
-			var timeout;
-
-			window.onload = function(){
-				if (localStorage.getItem("quiz.nome") == null){
-					print_time();
-				}else{
-					iniciar_quiz();
-				}
-			}
-
-			function print_time(){
-				var data_hora = new Date();			
-				var barra_status = document.getElementById("barra_status");
-				barra_status.innerHTML = data_hora;
-				timeout = setTimeout("print_time()", 1);
-			}
-
-			function print_barra_status(texto_barra_status){			
-				var barra_status = document.getElementById("barra_status");
-				var tempo_quiz = isNaN(localStorage.getItem("quiz.tempo")) ? 0 : localStorage.getItem("quiz.tempo");
-				tempo_quiz = parseInt(tempo_quiz) + 1;
-				localStorage.setItem("quiz.tempo", tempo_quiz); 
-
-				msg = texto_barra_status; //pra poder passar parametro no setTimeout
-				tempo_quiz++;
-				barra_status.innerHTML = msg + " >> Tempo: " + tempo_quiz + " seg";
-				timeout = setTimeout("print_barra_status(msg)", 1000);
-			}
-
-			function iniciar_quiz(){
-				var perguntas = document.getElementById("perguntas");
-				var header_quiz = document.getElementById("header_quiz");
-				var texto_barra_status;
-				var nome;
-
-				if (localStorage.getItem("quiz.nome") == null){
-					nome = document.getElementById("nome").value;			
-
-					if (nome == ""){
-						alert("Informe seu nome corretamente!");
-						exit;
-					}
-
-					localStorage.setItem("quiz.nome", nome);
-				}else{
-					nome = localStorage.getItem("quiz.nome");
-				}
-
-
-				texto_barra_status = "Quiz iniciado >> Nome: " + nome;
-				header_quiz.style.visibility = "hidden";
-				header_quiz.style.position = "absolute"; //para deixar div perguntas sobrepor esta div
-				perguntas.style.visibility = "visible";
-				
-				clearTimeout(timeout);				
-				print_barra_status(texto_barra_status);
-			}
-
-			//validacao quiz
-			function validar_quiz(form){
-				var opcoes = form;				
-				var obj;
-				var pontos=0;
-
-				for (i=0; i<opcoes.elements.length; i++){
-					obj = opcoes.elements[i];
-					//desabilita todas as respostas
-					obj.disabled = true;
-
-					if (obj.name == "quiz_1"){
-						pontos += obj.value == "assembly" && obj.checked ? 1 : 0;
-
-						if (obj.value == "assembly"){
-							document.getElementById("quiz_"+i).setAttribute("class", "resposta_certa");
-						}else if (obj.checked && obj.value != "assembly"){
-							document.getElementById("quiz_"+i).setAttribute("class", "resposta_errada");
-						}
-					}
-
-					if (obj.name == "quiz_2"){
-						pontos += obj.value == "cp" && obj.checked ? 1 : 0;
-
-						if (obj.value == "cp"){
-							document.getElementById("quiz_"+i).setAttribute("class", "resposta_certa");
-						}else if (obj.checked && obj.value != "cp"){
-							document.getElementById("quiz_"+i).setAttribute("class", "resposta_errada");
-						}
-					}
-
-					if (obj.name == "quiz_3"){
-						pontos += obj.value == "bsd" && obj.checked ? 1 : 0;
-
-						if (obj.value == "bsd"){
-							document.getElementById("quiz_"+i).setAttribute("class", "resposta_certa");
-						}else if (obj.checked && obj.value != "bsd"){
-							document.getElementById("quiz_"+i).setAttribute("class", "resposta_errada");
-						}
-					}
-
-					if (obj.name == "quiz_4"){
-						pontos += obj.value == "shell" && obj.checked ? 1 : 0;
-
-						if (obj.value == "shell"){
-							document.getElementById("quiz_"+i).setAttribute("class", "resposta_certa");
-						}else if (obj.checked && obj.value != "shell"){
-							document.getElementById("quiz_"+i).setAttribute("class", "resposta_errada");
-						}
-					}
-
-					if (obj.name == "quiz_5"){
-						pontos += obj.value == "atet" && obj.checked ? 1 : 0;
-
-						if (obj.value == "atet"){
-							document.getElementById("quiz_"+i).setAttribute("class", "resposta_certa");
-						}else if (obj.checked && obj.value != "atet"){
-							document.getElementById("quiz_"+i).setAttribute("class", "resposta_errada");
-						}
-					}
-
-					var resultado_quiz = document.getElementById("resultado_quiz");
-					resultado_quiz.style.position = "relative";
-					resultado_quiz.style.visibility = "visible";
-
-					if (pontos >2){
-						resultado_quiz.setAttribute("class", "resultado_positivo_quiz");
-						resultado_quiz.innerHTML = "<div><h3>Pontuação!</h3><p>Parabéns!<br>Você acertou <b>" + pontos + "</b> respostas e obteve um rendimento de <b>" + parseFloat(pontos/5)*100 + "%</b><p>Agora indique nosso site para seus colegas competirem com você!</div>";
-					}else{
-						resultado_quiz.setAttribute("class", "resultado_negativo_quiz");
-						resultado_quiz.innerHTML = "<div><h3>Pontuação!</h3><p>Infelizmente você não foi muito bem!<br>Você acertou <b>" + pontos + "</b> respostas com <b>" + parseFloat(pontos/5)*100 + "%</b> de rendimento<p>Recomendamos ler nosso artigo para obter maior conhecimento e tentar novamente nosso quiz!</div>";
-					}
-				}
-			}
-		</script>
+		<script type="text/javascript" src="javascripts/quiz.js"></script>
 	</head>
 	<body>		
 		<div id="conteiner">
@@ -170,7 +37,7 @@
 				</ul>
 			</div>
 
-			<div id="conteudo">
+			<div id="conteudo" class="conteudo_quiz">
 				<div id="header_quiz">
 					<input type="text" placeholder="Digite seu nome" id="nome"><input type="submit" value="Iniciar" onclick="iniciar_quiz();">
 				</div>
@@ -180,48 +47,98 @@
 					<h2>Teste Seu Conhecimento Sobre o Unix</h2>
 					<h3>Somente uma alternativa de cada pergunta está correta!</h3></br>
 
-					<div id="pergunta_1">
-						<b>1.Qual foi a primeira linguagem em que o sistema UNIX foi escrita?</b></br>
-							<div id="quiz_0"><label><INPUT type="radio" name="quiz_1" value="assembly">Assembly</label></div><!--verdadeira-->
-							<div id="quiz_1"><label><INPUT type="radio" name="quiz_1" VALUE="b">lingugem B</label></div>
-							<div id="quiz_2"><label><INPUT type="radio" name="quiz_1" VALUE="c">Linguagem C</label></div>
-							<div id="quiz_3"><label><INPUT type="radio" name="quiz_1" VALUE="pascal">Pascal</label></div>
-							<div id="quiz_4"><label><INPUT type="radio" name="quiz_1" VALUE="java">Java</label></div>
-					</div>
-					<div id="pergunta_2">
-						</br><b>2.Qual a forma de escalonamento de processos no UNIX nas releases mais recentes?</b></br>
-							<div id="quiz_5"><label><INPUT type="radio" name="quiz_2" VALUE="fcfs">FCFS</label></div>
-							<div id="quiz_6"><label><INPUT type="radio" name="quiz_2" VALUE="sjf">SJF</label></div>
-							<div id="quiz_7"><label><INPUT type="radio" name="quiz_2" VALUE="rr">Round Robin</label></div>
-							<div id="quiz_8"><label><INPUT type="radio" name="quiz_2" VALUE="sjf_p">SJF com Prioridade</label></div>
-							<div id="quiz_9"><label><INPUT type="radio" name="quiz_2" VALUE="cp">Round Robin com Prioridade</label></div><!--verdadeira-->
-					</div>
-					<div id="pergunta_3">
-						</br><b>3.Qual é o nome da versao open source do UNIX?</b></br>
-							<div id="quiz_10"><label><INPUT type="radio" name="quiz_3" VALUE="sbd">SBD</label></div>
-							<div id="quiz_11"><label><INPUT type="radio" name="quiz_3" VALUE="sbs">SBS</label></div>
-							<div id="quiz_12"><label><INPUT type="radio" name="quiz_3" VALUE="bsd">BSD</label></div><!--verdadeira-->
-							<div id="quiz_13"><label><INPUT type="radio" name="quiz_3" VALUE="bds">BDS</label></div>
-							<div id="quiz_14"><label><INPUT type="radio" name="quiz_3" VALUE="bdc">BDC</label></div>
-					</div>
-					<div id="pergunta_4">
-						</br><b>4.Qual o utilitario que permite a interpretação de comandos?</b></br>
-							<div id="quiz_15"><label><INPUT type="radio" name="quiz_4" VALUE="terminal">Terminal</label></div>
-							<div id="quiz_16"><label><INPUT type="radio" name="quiz_4" VALUE="shell">Shell</label></div><!--verdadeira-->
-							<div id="quiz_17"><label><INPUT type="radio" name="quiz_4" VALUE="kernel">Kernel</label></div>
-							<div id="quiz_18"><label><INPUT type="radio" name="quiz_4" VALUE="daemon">Daemon</label></div>
-							<div id="quiz_19"><label><INPUT type="radio" name="quiz_4" VALUE="system_calls">System Calls</label></div>
-					</div>
-					<div id="pergunta_5">
-						</br><b>5.Qual empresa é a detentora do sistema UNIX privado?</b></br>
-							<div id="quiz_20"><label><INPUT type="radio" name="quiz_5" VALUE="bells">Bells</label></div>
-							<div id="quiz_21"><label><INPUT type="radio" name="quiz_5" VALUE="atet">AT&T</label></div><!--verdadeira-->
-							<div id="quiz_22"><label><INPUT type="radio" name="quiz_5" VALUE="ge">General Eletrics</label></div>
-							<div id="quiz_23"><label><INPUT type="radio" name="quiz_5" VALUE="mit">MIT</label></div>
-							<div id="quiz_24"><label><INPUT type="radio" name="quiz_5" VALUE="berckley">Berckley</label></div>
+					<div id="pagina_1">
+						<div id="pergunta_1">
+							<b>1.Qual foi a primeira linguagem em que o sistema UNIX foi escrita?</b></br>
+								<div id="quiz_0"><label><INPUT type="radio" name="quiz_1" value="assembly">Assembly</label></div><!--verdadeira-->
+								<div id="quiz_1"><label><INPUT type="radio" name="quiz_1" VALUE="b">lingugem B</label></div>
+								<div id="quiz_2"><label><INPUT type="radio" name="quiz_1" VALUE="c">Linguagem C</label></div>
+								<div id="quiz_3"><label><INPUT type="radio" name="quiz_1" VALUE="pascal">Pascal</label></div>
+								<div id="quiz_4"><label><INPUT type="radio" name="quiz_1" VALUE="java">Java</label></div>
+						</div>
+						<div id="pergunta_2">
+							</br><b>2.Qual a forma de escalonamento de processos no UNIX nas releases mais recentes?</b></br>
+								<div id="quiz_5"><label><INPUT type="radio" name="quiz_2" VALUE="fcfs">FCFS</label></div>
+								<div id="quiz_6"><label><INPUT type="radio" name="quiz_2" VALUE="sjf">SJF</label></div>
+								<div id="quiz_7"><label><INPUT type="radio" name="quiz_2" VALUE="rr">Round Robin</label></div>
+								<div id="quiz_8"><label><INPUT type="radio" name="quiz_2" VALUE="sjf_p">SJF com Prioridade</label></div>
+								<div id="quiz_9"><label><INPUT type="radio" name="quiz_2" VALUE="cp">Round Robin com Prioridade</label></div><!--verdadeira-->
+						</div>
+						<div id="pergunta_3">
+							</br><b>3.Qual é o nome da versao open source do UNIX?</b></br>
+								<div id="quiz_10"><label><INPUT type="radio" name="quiz_3" VALUE="sbd">SBD</label></div>
+								<div id="quiz_11"><label><INPUT type="radio" name="quiz_3" VALUE="sbs">SBS</label></div>
+								<div id="quiz_12"><label><INPUT type="radio" name="quiz_3" VALUE="bsd">BSD</label></div><!--verdadeira-->
+								<div id="quiz_13"><label><INPUT type="radio" name="quiz_3" VALUE="bds">BDS</label></div>
+								<div id="quiz_14"><label><INPUT type="radio" name="quiz_3" VALUE="bdc">BDC</label></div>
+						</div>
+						<div id="pergunta_4">
+							</br><b>4.Qual o utilitario que permite a interpretação de comandos?</b></br>
+								<div id="quiz_15"><label><INPUT type="radio" name="quiz_4" VALUE="terminal">Terminal</label></div>
+								<div id="quiz_16"><label><INPUT type="radio" name="quiz_4" VALUE="shell">Shell</label></div><!--verdadeira-->
+								<div id="quiz_17"><label><INPUT type="radio" name="quiz_4" VALUE="kernel">Kernel</label></div>
+								<div id="quiz_18"><label><INPUT type="radio" name="quiz_4" VALUE="daemon">Daemon</label></div>
+								<div id="quiz_19"><label><INPUT type="radio" name="quiz_4" VALUE="system_calls">System Calls</label></div>
+						</div>
+						<div id="pergunta_5">
+							</br><b>5.Qual empresa é a detentora do sistema UNIX privado?</b></br>
+								<div id="quiz_20"><label><INPUT type="radio" name="quiz_5" VALUE="bells">Bells</label></div>
+								<div id="quiz_21"><label><INPUT type="radio" name="quiz_5" VALUE="atet">AT&T</label></div><!--verdadeira-->
+								<div id="quiz_22"><label><INPUT type="radio" name="quiz_5" VALUE="ge">General Eletrics</label></div>
+								<div id="quiz_23"><label><INPUT type="radio" name="quiz_5" VALUE="mit">MIT</label></div>
+								<div id="quiz_24"><label><INPUT type="radio" name="quiz_5" VALUE="berckley">Berckley</label></div>
+						</div>
+
+						<div id="btn_controle_quiz"><input type="button" value="Continuar >>" onclick="mudar_pagina(pagina_1, pagina_2);"></div>
 					</div>
 
-					<input type="button" value="Validar" onclick="validar_quiz(this.form);">
+					<div id="pagina_2">
+						<div id="pergunta_6">
+							<b>6.O que é Gerência de Memória?</b></br>
+								<div id="quiz_26"><label><INPUT type="radio" name="quiz_6" value="1">Software para melhorar o desempenho da memória</label></div>
+								<div id="quiz_27"><label><INPUT type="radio" name="quiz_6" VALUE="2">Barramento para plugar a memória</label></div>
+								<div id="quiz_28"><label><INPUT type="radio" name="quiz_6" VALUE="3">Funçao do sistema operacional responsável por alocar e gerenciar memória para os processos</label></div>
+								<div id="quiz_29"><label><INPUT type="radio" name="quiz_6" VALUE="4">Função do sistema operacional que gerencia espaço no HD</label></div>
+								<div id="quiz_30"><label><INPUT type="radio" name="quiz_6" VALUE="5">Ferramenta do sistema operacional usada quando a memória virtual está baixa</label></div>
+						</div>
+						<div id="pergunta_7">
+							</br><b>7.Como os programas são executados?</b></br>
+								<div id="quiz_31"><label><INPUT type="radio" name="quiz_7" VALUE="1">O processador possui tecnologia para executar tudo simultaneamente</label></div>
+								<div id="quiz_32"><label><INPUT type="radio" name="quiz_7" VALUE="2">Os programas são executados conforme o usuário solicitar</label></div>
+								<div id="quiz_33"><label><INPUT type="radio" name="quiz_7" VALUE="3">Não existe controle de execução</label></div>
+								<div id="quiz_34"><label><INPUT type="radio" name="quiz_7" VALUE="4">É executado o que for aberto primeiro</label></div>
+								<div id="quiz_35"><label><INPUT type="radio" name="quiz_7" VALUE="5">Existe concorrência entre eles, sendo utilizado algorítimos para escolher qual programa é executado primeiro</label></div><!--verdadeira-->
+						</div>
+						<div id="pergunta_8">
+							</br><b>8.HTML é ...</b></br>
+								<div id="quiz_36"><label><INPUT type="radio" name="quiz_8" VALUE="1">Linguagem de marcação utilizada para formatação de páginas web</label></div>
+								<div id="quiz_37"><label><INPUT type="radio" name="quiz_8" VALUE="2">Linguagem de auto nível para desenvolvimento de aplicativos comerciais</label></div>
+								<div id="quiz_38"><label><INPUT type="radio" name="quiz_8" VALUE="3">Linguagem de baixo nível para desenvolvimento de drivers para sistemas operacionais</label></div>
+								<div id="quiz_39"><label><INPUT type="radio" name="quiz_8" VALUE="4">Novo sistema operacional concorrente da Microsoft</label></div>
+								<div id="quiz_40"><label><INPUT type="radio" name="quiz_8" VALUE="5">Height Temperature Manager Less - Gerência de Temperatura Alta e Baixa</label></div>
+						</div>
+						<div id="pergunta_9">
+							</br><b>9.CSS é ...</b></br>
+								<div id="quiz_41"><label><INPUT type="radio" name="quiz_9" VALUE="1">Jogo para PS2</label></div>
+								<div id="quiz_42"><label><INPUT type="radio" name="quiz_9" VALUE="2">Cascading Style Sheets ou Folha de estilos - Lnguagem para estilos que define o layout de documentos HTML</label></div>
+								<div id="quiz_43"><label><INPUT type="radio" name="quiz_9" VALUE="3">Gerência de Memória do Unix</label></div>
+								<div id="quiz_44"><label><INPUT type="radio" name="quiz_9" VALUE="4">Control Systems - Controle o Sistema</label></div>
+								<div id="quiz_45"><label><INPUT type="radio" name="quiz_9" VALUE="5">Nome de uma igreja americana fundada por programadores</label></div>
+						</div>
+						<div id="pergunta_10">
+							</br><b>5.O que é Javascript?</b></br>
+								<div id="quiz_46"><label><INPUT type="radio" name="quiz_10" VALUE="1">Versão especial do Java</label></div>
+								<div id="quiz_47"><label><INPUT type="radio" name="quiz_10" VALUE="2">Linguagem de programação interpretada que faz parte dos navegadores web</label></div>
+								<div id="quiz_48"><label><INPUT type="radio" name="quiz_10" VALUE="3">Linguagem de programação compilada</label></div>
+								<div id="quiz_49"><label><INPUT type="radio" name="quiz_10" VALUE="4">Linguagem de formatação</label></div>
+								<div id="quiz_50"><label><INPUT type="radio" name="quiz_10" VALUE="5">Aplicativo para manipulação de fotos</label></div>
+						</div>
+
+						<div id="btn_controle_quiz">
+							<input type="button" value="<< Voltar" onclick="mudar_pagina(pagina_2, pagina_1);">
+							<input type="button" value="Validar" onclick="validar_quiz(this.form);">
+						</div>
+					</div>
 				</form>
 			</div>
 		</div>
