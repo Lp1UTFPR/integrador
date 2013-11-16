@@ -90,7 +90,7 @@ body{
 
 .conteudo_quiz{
 	background-image: url(../imagens/quiz_fundo.jpg);
-	background-repeat: no-repeat;	
+	background-repeat: repeat-y;	
 }
 
 #rodape{
@@ -218,16 +218,17 @@ h2{
 }
 
 /*********************terminal*********************/
-#pagina_total{
-	text-align: center;
-	text-decoration: white;
-	color: white;
+#terminal{
+	min-height: 300px;
+	padding-top: 10px;
+	background: #000;
+	color: #fff;
+	font-family: Monospace,Helvetica,Arial;
+	font-size: 13px;
 }
 
-.terminal{
-	background-color: black;
-	color: white;
-	font-family: Monospace,Helvetica,Arial;
+#terminal a{
+	color: rgb(114, 226, 119);
 }
 
 #dados{
@@ -237,3 +238,11 @@ h2{
 	outline:none;
 }
 
+#rodape_terminal{
+	width: 900px;
+	height: 20px;
+	margin: 0px auto;
+	text-align: left;
+	background: url(../imagens/pontilhado.png) repeat-x #2F3138;
+	clear: both;
+}
