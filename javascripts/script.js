@@ -1,8 +1,16 @@
-sfunction ocultar(id){
+function ocultar(id){
+	
 	var elemento=document.getElementById(id);
-	elemento.style.display="none";
+	if (elemento.style.display =="block")
+		elemento.style.display="none";
+	else
+		elemento.style.display="block";
+	if(id == 'iniciar')
+	{
+		if (fundo.style.display=="block")	
+			fundo.style.display="none";
+		else
+			fundo.style.display="block";
+	}
 }
-function mostrar(id){
-	var elemento=document.getElementById(id);
-	elemento.style.display="block";
-}
+

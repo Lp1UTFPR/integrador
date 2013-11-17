@@ -47,14 +47,16 @@
 			</div>
 
 			<div id="menu_left">
-				<div id="unix_logo"><img src="imagens/logo-menu-unix.jpg" onclick="mostrar('iniciar');" width="50%" >
-					<div id="iniciar">
-						<div id="fechar"onclick="ocultar('iniciar');"> <b>X</b>  </div>
-						<div><a href="inicio.html">Descktop</a></div>
-						<div><a href="gerencias.html">gerencia</a></div>
-						<div><a href="index.html">Terminal</a></div>
-						<div><a href="quiz.html">Quiz</a></div>
-						
+				<div id="unix_logo"><img src="imagens/logo-menu-unix.jpg" onclick="ocultar('iniciar');" width="50%" >
+					<div id="fundo" ></div>
+					<div id="iniciar" >						
+						<div id="texto_menu">
+								<div><h3>MENU PRINCIPAL</h3></div>	
+								<div><a href="inicio.html"><img src="imagens/pc.jpg" height="30" width="30" alt="#"><span><b>Desktop</b></span></a></div>
+								<div><a href="gerencias.html"><img src="imagens/gerencia.jpg" height="30" width="30" alt="#"><span><b>Gerencia</b></span></a></div>
+								<div><a href="index.html"><img src="imagens/shell.jpg" height="30" width="30" alt="#"><span><b>Terminal</b></span></a></div>
+								<div><a href="quiz.html"><img src="imagens/interrogacao.jpg" height="30" width="30" alt="#"><span><b>Quiz</b></span></a></div>
+						</div>
 					</div>
 				</div>
 
@@ -81,13 +83,13 @@
 			<div id="conteudo">
 				<div id="icones">
 					<h2>Gerencias</h2>
-					<img src="imagens/memoria.png" class="botao" onclick="mostrar('g_memoria');" alt="Gerencia de Memoria" title="Gerencia de Memoria">
+					<img src="imagens/memoria.png" class="botao" onclick="ocultar('g_memoria');" alt="Gerencia de Memoria" title="Gerencia de Memoria">
 					
-					<img src="imagens/cpu.png" class="botao" onclick="mostrar('g_processador');" alt="Gerencia do Processador" title="Gerencia do Processador">
+					<img src="imagens/cpu.png" class="botao" onclick="ocultar('g_processador');" alt="Gerencia do Processador" title="Gerencia do Processador">
 					
-					<img src="imagens/arquivos.png" class="botao" onclick="mostrar('g_arquivos')" alt="Gerencia de Arquivos" title="Gerencia de Arquivos">
+					<img src="imagens/arquivos.png" class="botao" onclick="ocultar('g_arquivos')" alt="Gerencia de Arquivos" title="Gerencia de Arquivos">
 					
-					<img src="imagens/usb_cabe.png" class="botao" onclick="mostrar('g_entradaesaida');" alt="Gerencia de E/S" title="Gerencia de E/S">
+					<img src="imagens/usb_cabe.png" class="botao" onclick="ocultar('g_entradaesaida');" alt="Gerencia de E/S" title="Gerencia de E/S">
 					
 				</div>
 					<div id="g_memoria">
