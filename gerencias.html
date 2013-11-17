@@ -1,0 +1,173 @@
+<DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Gerencias Do Unix</title>
+	<link rel="stylesheet" href="css/estilo.css">
+	<style type="text/css">
+		#g_memoria,#g_processador,#g_arquivos,#g_entradaesaida{
+			display: none;
+			border:solid;
+			border-color: gray;	
+		}
+		#icones{
+			text-align: center;
+			height: 20%;
+		}
+		.botao{
+			border-style: outset;
+			border-color: gray;
+			background-color: gray;
+			width: 12%;
+			height: 50%;
+			margin-left: 0.3%;			
+		}
+		#topo{
+			width: auto;	
+		}
+		#barra_status{
+			border:solid;
+		}
+		.gerencias{
+			margin-left: 13%;
+		}
+		h5{
+			text-align: center;
+		}
+	</style>
+	<script src="javascripts/script.js" type="text/javascript" charset="utf-8" async defer></script>
+	
+</head>
+	<body>
+	</div>		
+		<div id="conteiner">
+			<div id="topo">
+				<div id="nome_so" onclick="document.location.href='index.html';">Unix 1.0</div>
+				<div id="barra_status"></div>
+			</div>
+
+			<div id="menu_left">
+				<div id="unix_logo"><img src="imagens/logo-menu-unix.jpg" onclick="mostrar('iniciar');" width="50%" >
+					<div id="iniciar">
+						<div id="fechar"onclick="ocultar('iniciar');"> <b>X</b>  </div>
+						<div><a href="inicio.html">Descktop</a></div>
+						<div><a href="gerencias.html">gerencia</a></div>
+						<div><a href="index.html">Terminal</a></div>
+						<div><a href="quiz.html">Quiz</a></div>
+						
+					</div>
+				</div>
+
+				<ul>
+					<li>
+						<a href="artigo falta html.pdf" target="_blank"><img src="imagens/ler.jpg" width="17%"><h4>Artigo Unix</h4>
+						<div>Leia um bom artigo sobre Unix, HTML5 e CSS.</div></a>
+					</li>
+ 					<li>
+						<a href="quiz.html"><img src="imagens/quiz.jpg" width="26%"><h4>Quiz</h4>
+						<div>Teste seus conhecimentos com nosso Quiz.</div></a>
+					</li>
+					<li>
+						<img src="imagens/recomendar.png" width="22%"><h4>Recomendações</h4>
+						<div>Vale a pena conferir nossa lista de recomendações.</div>
+					</li>
+					<li>
+						<a href="download.html"><img src="imagens/download-unix.jpg" width="22%"><h4>Use Unix</h4>
+						<div>Baixe agora mesmo o Unix.</div></a>
+					</li>
+				</ul>
+			</div>
+
+			<div id="conteudo">
+				<div id="icones">
+					<h2>Gerencias</h2>
+					<img src="imagens/memoria.png" class="botao" onclick="mostrar('g_memoria');" alt="Gerencia de Memoria" title="Gerencia de Memoria">
+					
+					<img src="imagens/cpu.png" class="botao" onclick="mostrar('g_processador');" alt="Gerencia do Processador" title="Gerencia do Processador">
+					
+					<img src="imagens/arquivos.png" class="botao" onclick="mostrar('g_arquivos')" alt="Gerencia de Arquivos" title="Gerencia de Arquivos">
+					
+					<img src="imagens/usb_cabe.png" class="botao" onclick="mostrar('g_entradaesaida');" alt="Gerencia de E/S" title="Gerencia de E/S">
+					
+				</div>
+					<div id="g_memoria">
+						<div id="topo">
+							<div id="nome_so" onclick="ocultar('g_memoria');">Unix 1.0</div>
+							GERENCIA DE MEMORIA
+						</div>
+						<h4>Gerencia de Memoria</h4>
+						Nas primeiras versoes ela era baseada, segmentada ou paginanda e na versao mais recente se tornou <u>Segmentada/Paginada</u>.
+						<br><i><b>A Gerencia de memoria</b></i> garante proteção e permite modificações dinamicas no  espaço de endereçamento, ela tabém mantém o maior número possivel de processos carregados na memória e minimiza transferencias entre disco e memória. Sua implementação nas arquiteturas segmentadas ou baseadas se dá pela transferencia <i>Swapping</i>, e nas arquiteturas segmentadas/paginadas por meio da Paginação por demanda.<br>
+						<br><img class="gerencias" src="imagens/swapping.jpg" height="400" width="500" alt="Swaping">
+						<h5>(imagen= <a href="http://files.sistemasdearquivos.webnode.com.br/200000054-eacadebc42/swapping.jpg">http://files.sistemasdearquivos.webnode.com.br</a>).</h5>
+						<h3>Paginação</h3>
+						<br><img class="gerencias" src="imagens/paginacao.PNG" height="400" width="500" alt="Paginacao">
+						<h5>(imagem=<a href="http://4.bp.blogspot.com/_7-JaJbp4Cjo/TQZXQcbeMWI/AAAAAAAABcc/gzAmew5bQbk/s1600/Capturar.PNG">http://4.bp.blogspot.com/</a>).</h5>
+						<b>Paginação: </b>Uma tabela controla o numero e o local onde as paginas que saem da memoria são alocadas em disco, assim quando um processo é chamado para a execusão e este não se encontra na memoria a gerencia verifica na tabela a posição das paginas referentes ao processo para busca-las em disco e posteriormente carregar na memoria fisica. 
+
+					</div>
+					<div id="g_processador">
+						<div id="topo">
+							<div id="nome_so" onclick="ocultar('g_processador');">Unix 1.0</div>
+							GERENCIA DO PROCESSADOR
+						</div>
+						<h4>Gerencia do processador</h4>
+						Uma tarefa da Gerencia de processamento é o Escalonamento de processos, este escalonamento tem por objetivo permitir o compartilhamento do processador entre os processos que o desputam e oferecer baixo tempo para as respostas aos usuarios.
+						A Prioridade dos processos no UNIX vai de 0 á 127 e quanto menor o valor maior a sua prioridade, os processos quando estao em estado de pronto ocupam filas para o uso do processador que as escalona conforme suas prioridades, e quando está em execução este permanece por um periodo de tempo que varia de 10 a 100 milisegundos e depois retorna para as filas de espera.
+
+						O UNIX utiliza dois tipos de escalonamento de processador:
+						<ul>
+							<li>Escalonamento Por Prioridades <b>_</b>Se não houvesse uma gerencia de processamento e somente um escalonamento por prioridades processos com prioridades baixas poderiam sofrer <i>Starvation</i> ou seja nunca serem executados, por sempre surgirem processos mais prioritarios que ele, neste caso a gerencia de processador do unix faz a cada momento um calculo das prioridades dos processos que estao na fila de espera levando em conta seu tempo de espera e prioridade em si.</li>
+							<li>Escalonamento Circular Com Prioridades <b>_</b>O Escalonamento circular fica com a parte de realimentação das filas de espera, ja que ele delimita o tempo maximo de execução dos processos</li>
+							<img class="gerencias" src="imagens/round_robin.gif" height="150" width="375">
+							<h5>(imagen= <a href="http://www.ppgia.pucpr.br/~laplima/ensino/soecd/so_common/materia/images/f_prior.gif">http://www.ppgia.pucpr.br/~laplima/ensino/soecd/so_common/materia/02_processos.html</a>)</h5>
+						</ul>
+
+
+
+					</div>
+					<div id="g_arquivos">
+						<div id="topo">
+							<div id="nome_so" onclick="ocultar('g_arquivos');">Unix 1.0</div>
+							GERENCIA DE ARQUIVOS
+						</div>
+						<h4>Gerencia de Arquivos</h4>
+						O Sistema de Arquivos no UNIX possui uma estrutura semelhante a uma arvore ou um organograma que parte do diretorio raiz "/" apartir da raiz temos o /bin, /dev , /etc, /lib, /user, /tmp
+						como apresentado na imagem a baixo:
+						<br>
+						<img class="gerencias" src="imagens/arquivos.gif" height="400" width="480">
+						<ul>
+							<li><b>/bin</b>. Armazena alguns executaveis e comandos basicos do sitema, geralmente ocupa um tamanho de 5 a 7 MB;</li>
+							<li><b>/dev</b>. O diretorio "dev" contem ponteiros para dispositivos de hardware, por exemplo o <b>/dev/mouse</b> contem as informações enviadas pelo mouse.</li>
+							<li><b>/etc</b>. concentra os arquivos de configuração do sistema.</li>
+							<li><b>/lib</b>. Aqui ficam as bibliotecas usadas pelos programas semelhante aos arquivos .dll no Windows.</li>
+							<li><b>/usr</b>. local onde é encontrado os executaveis e as bibliotecas de todos os programas instalados.</li>
+							<li><b>/tmp</b>. Neste local ficam armazenados os arquivos temporarios.</li>
+					</div>
+					<div id="g_entradaesaida">
+						<div id="topo">
+							<div id="nome_so" onclick="ocultar('g_entradaesaida');">Unix 1.0</div>
+							GERENCIA DOS DISPOSITIVOS DE ENTRADA E SAIDA
+						</div>
+							<h4>Gerencia de Entrada e Saida</h4>
+							No desenvolvimento do Sistema UNIX  a gerencia de entrada e saida foi criada de forma integrada ao sistema de arquivos, logo o acesso aos dispositivos é feita através de arquivos especiais, e cada dispositivo está associado a um ou mais destes arquios.
+							<br>As chamadas destes arquivos acontecem pelas <i>System Calls</i> de leitura e gravação que são chamadas de sistemas respondendo a açoes de programas do usuario.
+							<img class="gerencias" src="imagens/systemcalls.png">
+							<h5>imagen = Livro Arquitetura de Sistemas Operacionais (Machado e Maia - 2007 ) </h5>
+					</div>
+			</div>
+		</div>
+		
+		<div id="rodape">
+			<div id="autores">
+				<h4>Autores e Desenvolvedores</h4>
+				<div>Rodrigo Miss</div>
+				<div>Gustavo</div>
+				<div>André</div>
+				<div>Lucas</div>
+			</div>
+
+			<div id="logo_utfpr"><img src="imagens/logo-tsi.png"></div>
+		</div>	
+	</body>
+</html>

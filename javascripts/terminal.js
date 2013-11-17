@@ -59,8 +59,8 @@ function comando(){
   {
     if (cmd.value == "ls" || cmd.value=="LS" )
     {
-      mensagem="<a href='inicio.html'>inicio.html</a><br><a href='quiz.html'>quiz.html</a>";
-    }else if (cmd.value == "inicio.html" || cmd.value == "quiz.html"){
+      mensagem="<a href='inicio.html'>inicio.html</a><br><a href='gerencias.html'>gerencias.html</a><br><a href='quiz.html'>quiz.html</a>";
+    }else if (cmd.value == "inicio.html" || cmd.value == "quiz.html" || cmd.value == "gerencias.html"){
       window.location=cmd.value;
     }else if(cmd.value == "clear" || cmd.value == "CLEAR"){
       mensagem="";

@@ -257,3 +257,20 @@ h2{
 	background: url(../imagens/pontilhado.png) repeat-x #2F3138;
 	clear: both;
 }
+/***********************Menu iniciar*****************************/
+#iniciar{
+	border:solid;
+	border-color: white;
+	border-style: outset;
+	border-radius: 25px 25px 25px 25px;
+	background-color: white;
+	opacity: 0.4;
+	position: absolute;
+	margin-left: 10%;
+	display: none;
+	width: 40%;
+	height: 30%;
+}
+#fechar{
+	position: absolute;
+}

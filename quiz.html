@@ -6,6 +6,7 @@
 		
 		<link href="css/estilo.css" rel="stylesheet" type="text/css">
 		<script type="text/javascript" src="javascripts/quiz.js"></script>
+		<script src="javascripts/script.js" type="text/javascript" charset="utf-8" async defer></script>
 	</head>
 	<body>		
 		<div id="conteiner">
@@ -15,7 +16,16 @@
 			</div>
 
 			<div id="menu_left">
-				<div id="unix_logo"><img src="imagens/logo-menu-unix.jpg" width="50%" ></div>
+				<div id="unix_logo"><img src="imagens/logo-menu-unix.jpg" onclick="mostrar('iniciar');" width="50%" >
+					<div id="iniciar">
+						<div id="fechar"onclick="ocultar('iniciar');"> <b>X</b>  </div>
+						<div><a href="inicio.html">Descktop</a></div>
+						<div><a href="gerencias.html">gerencia</a></div>
+						<div><a href="index.html">Terminal</a></div>
+						<div><a href="quiz.html">Quiz</a></div>
+						
+					</div>
+				</div>
 
 				<ul>
 					<li>
