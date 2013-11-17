@@ -1,4 +1,4 @@
-sfunction ocultar(id){
+function ocultar(id){
 	var elemento=document.getElementById(id);
 	elemento.style.display="none";
 }
