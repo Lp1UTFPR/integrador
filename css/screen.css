@@ -1,0 +1,111 @@
+@media screen and (max-width: 900px){
+	#conteiner{
+		width: 100%;
+	}
+
+	#topo{
+		width: 100%;
+	}
+
+	#topo #barra_status{
+		width: 86%;
+	}
+
+	#topo #nome_so{
+		width: 11%;
+		padding-left: 3%;
+	}
+
+	#menu_left{
+		width: 23%;
+		margin-left: 1%;
+	}
+
+	#conteudo{
+		width: 70%;
+		padding-left: 1%;
+	}
+
+	#rodape{
+		width: 100%;
+	}
+
+	#rodape #logo_utfpr{
+		width: 65%;
+	}
+
+	#rodape #logo_utfpr img{
+		width: 100%;
+	}
+
+	#header_quiz{
+		width: 90%;
+		margin-left: 0;
+		padding-left: 0;
+	}
+
+	#iniciar{	
+		font-size: 80%;
+	}
+}
+
+@media screen and (max-width: 480px){
+	#conteiner{
+		width: 100%;
+	}
+
+	#topo{
+		width: 100%;
+	}
+
+	#topo #barra_status{
+		width: 86%;
+	}
+
+	#topo #nome_so{
+		width: 11%;
+		padding-left: 3%;
+	}
+
+	#menu_left{
+		width: 90%;
+		margin: auto;
+		float: none;
+	}
+
+	#conteudo{
+		width: 90%;
+		margin: auto;
+	}
+
+	#rodape{
+		width: 100%;
+	}
+
+	#rodape #autores{
+		width: 25%;
+	}
+
+	#rodape #logo_utfpr{
+		width: 65%;
+	}
+
+	#rodape #logo_utfpr img{
+		width: 100%;
+	}
+
+	#header_quiz{
+		width: 90%;
+		margin-left: 0;
+		padding-left: 0;
+	}
+
+	#iniciar{
+		width: 100%;
+		font-size: 70%;
+	}
+
+	#fundo{
+		width: 85%;
+	}
+}
