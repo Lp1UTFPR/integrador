@@ -1,26 +1,13 @@
-<!DOCTYPE HTML>
+<DOCTYPE html>
 <html lang="pt-br">
-	<head>
-		<meta charset="utf-8">
-		<title>Unix - O pai de todos os Sistemas Operacionais</title>
-		
-		<link href="css/estilo.css" rel="stylesheet" type="text/css">
-		<link href="css/screen.css" rel="stylesheet" type="text/css">
-		<script type="text/javascript">
-			function print_barra_status(){
-				var data_hora = new Date();
-				document.getElementById("barra_status").innerHTML = data_hora;
-				setTimeout("print_barra_status()", 1);
-			}
-
-			window.onload = function(){
-				print_barra_status();
-			}
-		</script>
-		<script src="javascripts/script.js" type="text/javascript" charset="utf-8" async defer></script>
-	</head>
-	<body>		
-		<div id="conteiner">
+<head>
+	<meta charset="utf-8">
+	<title>UNIX S.O</title>
+	<link rel="stylesheet" href="css/estilo.css">
+	<script src="javascripts/script.js" type="text/javascript" charset="utf-8" async defer></script>
+</head>
+<body>
+	<div id="conteiner">
 			<div id="topo">
 				<div id="nome_so" onclick="document.location.href='index.html';">Unix 1.0</div>
 				<div id="barra_status"></div>
@@ -61,15 +48,7 @@
 			</div>
 
 			<div id="conteudo">
-				<h2>O que é Unix?</h2>
-				<p>É o pai de quase todos os sistemas operacionais!
-				<p>Unix é um sistema operacional criado por Kenneth Thompson, e foi o primeiro sistema a introduzir conceitos muito importantes para SOs como suporte a multiusuários, multitarefas e portabilidade.
-				<p>Além disso, o Unix suporta tanto alterações por linhas de comando, que dão mais flexibilidade e precisão ao usuário, quanto definições via interface gráfica, uma opção normalmente mais prática e menos trabalhosa do que a anterior.
-
-				<h2>Porque usar Unix?</h2>
-				É rápido, seguro, fácil de instalar e utilizar, portável e é livre!
-				<div id="img_porque_usar_unix"><img src="imagens/banner-porque-usar-unix.png" width="50%"></div>
-				<a href="#">Leia mais ...</a>
+				
 			</div>
 		</div>
 		
@@ -84,5 +63,5 @@
 
 			<div id="logo_utfpr"><img src="imagens/logo-tsi.png"></div>
 		</div>
-	</body>
+</body>
 </html>
