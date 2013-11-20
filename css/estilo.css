@@ -296,3 +296,8 @@ h2{
 	border-radius: 25px 25px 25px 25px;
 	margin-left: 3%;
 }
+#menu_unix{
+			border: solid;
+			border-style: outset;
+			clear: both;
+}
