@@ -109,3 +109,36 @@
 		width: 85%;
 	}
 }
+/*********************gerencia******************/
+#g_memoria,#g_processador,#g_arquivos,#g_entradaesaida{
+	display: none;
+	border:solid;
+	border-color: gray;	
+}
+#icones{
+	text-align: center;
+	height: 20%;
+}
+.botao{
+	border-style: outset;
+	border-color: gray;
+	background-color: gray;
+	width: 12%;
+	height: 12%;
+	margin-left: 0.3%;			
+}
+#topo{
+	width: auto;	
+}
+#barra_status{
+	border:solid;
+}
+.gerencias{
+	margin-left: 13%;
+}
+h5{
+	text-align: center;
+}
+#menu_left{
+	margin-top: -15px;
+}
