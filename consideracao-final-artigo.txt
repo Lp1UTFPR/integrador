@@ -1,0 +1,5 @@
+Considerações Finais:
+
+
+No mundo da tecnologia, principalmente no que diz respeito a sistemas para internet, a evolução é exponencial, evidenciando isto nos navegadores do usuário, com aplicações atraentes, rápidas, seguras e modernas. 
+Para acompanhar este crescimento é necessário que os desenvolvedores explorem novas ferramentas e busquem conhecimento constantemente. Esta obra tem como objetivo mostrar a grande evolução do HTML, CSS e Javascript, incentivando o desenvolvedor utilizar adequadamente os novos recursos oferecidos por elas, em conjunto com um sistema operacional gratuito, rápido, seguro e fácil - FreeBSD, o unix gratuíto da Universidade Berkeley.
