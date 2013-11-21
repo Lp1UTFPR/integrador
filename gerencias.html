@@ -5,8 +5,18 @@
 	<title>Gerencias Do Unix</title>
 	<link rel="stylesheet" href="css/estilo.css">
 	<link href="css/screen.css" rel="stylesheet" type="text/css">
-	<script src="javascripts/script.js" type="text/javascript" charset="utf-8" async defer></script>
-	
+		<script type="text/javascript">
+			function print_barra_status(){
+				var data_hora = new Date();
+				document.getElementById("barra_status").innerHTML = data_hora;
+				setTimeout("print_barra_status()", 1);
+			}
+
+			window.onload = function(){
+				print_barra_status();
+			}
+		</script>
+		<script type="text/javascript" src="javascripts/script.js"></script>	
 </head>
 	<body>	
 		<div id="conteiner">
@@ -20,7 +30,10 @@
 					<div id="iniciar">						
 						<div id="texto_menu">
 								<div><h4>MENU PRINCIPAL</h4></div>
+<<<<<<< HEAD
 								<div><a href="slides.html"><img src="imagens/presentation.jpg" height="30" width="30"><span><b>Apresentação</b></span></a></div>	
+=======
+>>>>>>> 237f1cdf3d711548ebc22f61c9d22e691a54f4a0
 								<div><a href="artigo.pdf"><img src="imagens/artigo.jpg" height="30" width="30"><span><b>Artigo</b></span></a></div>	
 								<div><a href="inicio.html"><img src="imagens/pc.jpg" height="30" width="30" alt="#"><span><b>Desktop</b></span></a></div>
 								<div><a href="gerencias.html"><img src="imagens/gerencia.jpg" height="30" width="30" alt="#"><span><b>Gerencia</b></span></a></div>
@@ -34,7 +47,7 @@
 
 				<ul>
 					<li>
-						<a href="artigo falta html.pdf" target="_blank"><img src="imagens/ler.jpg" width="17%"><h4>Artigo Unix</h4>
+						<a href="artigo.pdf" target="_blank"><img src="imagens/ler.jpg" width="17%"><h4>Artigo Unix</h4>
 						<div>Leia um bom artigo sobre Unix, HTML5 e CSS.</div></a>
 					</li>
  					<li>
@@ -42,8 +55,8 @@
 						<div>Teste seus conhecimentos com nosso Quiz.</div></a>
 					</li>
 					<li>
-						<img src="imagens/recomendar.png" width="22%"><h4>Recomendações</h4>
-						<div>Vale a pena conferir nossa lista de recomendações.</div>
+						<a href="recomenda.html"><img src="imagens/recomendar.png" width="22%"><h4>Recomendações</h4>
+						<div>Vale a pena conferir nossa lista de recomendações.</div></a>
 					</li>
 					<li>
 						<a href="download.html"><img src="imagens/download-unix.jpg" width="22%"><h4>Use Unix</h4>
