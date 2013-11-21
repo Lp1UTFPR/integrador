@@ -20,11 +20,11 @@
 					<div id="iniciar">						
 						<div id="texto_menu">
 								<div><h4>MENU PRINCIPAL</h4></div>
-								<div><a href="#"><img src="imagens/artigo.jpg" height="30" width="30"><span><b>Artigo</b></span></a></div>	
+								<div><a href="Artigo UNIX final.pdf"><img src="imagens/artigo.jpg" height="30" width="30"><span><b>Artigo</b></span></a></div>	
 								<div><a href="inicio.html"><img src="imagens/pc.jpg" height="30" width="30" alt="#"><span><b>Desktop</b></span></a></div>
 								<div><a href="gerencias.html"><img src="imagens/gerencia.jpg" height="30" width="30" alt="#"><span><b>Gerencia</b></span></a></div>
 								<div><a href="quiz.html"><img src="imagens/interrogacao.jpg" height="30" width="30" alt="#"><span><b>Quiz</b></span></a></div>
-								<div><a href="#"><img src="imagens/recomenda.jpg" height="30" width="30"><span><b>Recomendações</b></span></a></div>
+								<div><a href="recomenda.html"><img src="imagens/recomenda.jpg" height="30" width="30"><span><b>Recomendações</b></span></a></div>
 								<div><a href="index.html"><img src="imagens/shell.jpg" height="30" width="30" alt="#"><span><b>Terminal</b></span></a></div>
 								<div><a href="unix.html"><img src="imagens/unix.jpg" height="30" width="30" alt="#"><span><b>UNIX</b></span></a></div>
 						</div>
@@ -33,7 +33,7 @@
 
 				<ul>
 					<li>
-						<a href="artigo falta html.pdf" target="_blank"><img src="imagens/ler.jpg" width="17%"><h4>Artigo Unix</h4>
+						<a href="Artigo UNIX final.pdf" target="_blank"><img src="imagens/ler.jpg" width="17%"><h4>Artigo Unix</h4>
 						<div>Leia um bom artigo sobre Unix, HTML5 e CSS.</div></a>
 					</li>
  					<li>
@@ -41,8 +41,8 @@
 						<div>Teste seus conhecimentos com nosso Quiz.</div></a>
 					</li>
 					<li>
-						<img src="imagens/recomendar.png" width="22%"><h4>Recomendações</h4>
-						<div>Vale a pena conferir nossa lista de recomendações.</div>
+						<a href="recomenda.html"><img src="imagens/recomendar.png" width="22%"><h4>Recomendações</h4>
+						<div>Vale a pena conferir nossa lista de recomendações.</div></a>
 					</li>
 					<li>
 						<a href="download.html"><img src="imagens/download-unix.jpg" width="22%"><h4>Use Unix</h4>
@@ -54,7 +54,23 @@
 		<div id="conteudo">
 			<h2>Processo Histórico UNIX</h2>
 			<div>
-				<img src="imagens/linha_tempo_unix.png" height="60%" width="75%">
+				<img id="imglivro" src="imagens/linha_tempo_unix.png" height="60%" width="75%">
+				<div id="texto">
+				<span id="ref_img"><b>figura:Arquitetura de Sistemas Operacionais 4 Edição  Machado & Maia, 2008.
+				</b></span><br><br><br>
+					O sitema operacional UNIX foi o precursor de diversos sistemas, isto por graças a sua facilidade de implementação derivada de sua linguagem ("C" e "Assembly") e sua forma modulada. Modulada? O que isso quer dizer?
+					Bom como o prórpio nome diz é a divisão do sistema em bibliotecas(partes), dessa maneira cada usuario poderia molda-lo da forma com que mais lhe fosse util. Para construir outro sistema é muito melhor ja se ter uma base pronta e só moldar as partes restantes para ter a cara desejada.
+					<br><b>Veja Abaixo alguns sistemas que derivaram do UNIX:</b>
+					<div id="sistemas">
+						<ul>
+							<li><a href="http://www.apple.com/br/osx/"><img id="mac" src="imagens/Mac.jpeg" title="Mac Os X"></a></li>
+							<li><a href="http://www.freebsd.org/"><img id="bsd" src="imagens/freebsd.jpg" title="Free BSD"></a></li>
+							<li><a href="http://www.oracle.com/br/products/servers-storage/solaris/solaris11/overview/index.html"><img id="solaris" src="imagens/solaris.png" title="Solaris"></a></li>
+							<li><a href="http://www.minix3.org/"><img id="minix" src="imagens/minix.jpg" title="Minix"></a></li>
+							<li><a href="http://www.ubuntu-br.org/"><img id="linux" src="imagens/imgunix.jpg" title="Linux" height="10%"></a></li>
+						</ul>
+					</div>
+				</div>
 			</div>
 		</div>
 		
