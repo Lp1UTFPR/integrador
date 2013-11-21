@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+nav {
+	margin-op: 60px;
+	left: 0;
+	right: 0;
+	z-index: 20;
+	background: #fff;
+	position: absolute;
+}
+
+nav li{
+	display: inline;
+}
+
+nav ul{
+	font-size: 14px;
+}
+
+nav a{
+	background: gray;
+	padding: 5px 10px;
+	border-radius: 3px;
+	color: #FFF;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+nav a:hover{
+	background: #000000;
+}
+
+.slideshow {
+	margin: auto;
+	padding-top: 160px;
+	position: relative;
+	height: 375px;
+	width: 500px;
+	overflow: hidden;
+}
+
+.target {
+	position: absolute;
+	top: 160px;
+	right: 500px;
+	width: 500px;
+	overflow: hidden;
+}
+
+.target:target{
+	left: 0px;
+}
