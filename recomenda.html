@@ -5,7 +5,17 @@
 		<title>Recomendações</title>
 		<link rel="stylesheet" href="css/estilo.css">
 		<link rel="stylesheet" href="css/screen.css">
-		<script src="javascripts/script.js" type="text/javascript" charset="utf-8" async defer></script>
+		<script type="text/javascript">
+			function print_barra_status(){
+				var data_hora = new Date();
+				document.getElementById("barra_status").innerHTML = data_hora;
+				setTimeout("print_barra_status()", 1);
+			}
+
+			window.onload = function(){
+				print_barra_status();
+			}
+		</script>
 	</head>
 <body>		
 		<div id="conteiner">
@@ -54,20 +64,20 @@
 			<div id="conteudo">
 				<div class="info"><img id="inf" src="imagens/info.png"><b>Informações:</b>
 				<ul>
-					<li>&nbsp;&nbsp;&nbsp;Toda a bibliograia extraida e o conteudo completo sobre os temas abordados neste site pode ser encontrada no artigo acessando o menu ao lado</li>
-					<li>&nbsp;&nbsp;&nbsp;Para saber como se iniciou o sucesso do sistema UNIX acesse sua primeira documentação dispinivel <a href="http://pdos.csail.mit.edu/6.828/2004/readings/ritchie74unix.pdf" title="DOC.UNIX">&nbsp;AQUI</a>
+					<li>&nbsp;&nbsp;&nbsp;Toda a bibliografia extraída e o conteúdo completo sobre os temas abordados neste site pode ser encontrada no artigo acessando o menu ao lado</li>
+					<li>&nbsp;&nbsp;&nbsp;Para saber como se iniciou o sucesso do sistema UNIX acesse sua primeira documentação dispinível <a href="http://pdos.csail.mit.edu/6.828/2004/readings/ritchie74unix.pdf" title="DOC.UNIX">&nbsp;AQUI</a>
 					</li>
-					<li>&nbsp;&nbsp;&nbsp;O motivo pelo qual o então sistema UNICS teve seu nome alterado para UNIX (há varias versões) segundo a Bell Labs é que com a falha nas vendas e no proprio sistema UNICS, o UNIX resurgiu das cinzas assim como a "Fênix" por isso o nome, dada a semehança com o fonema da palavra Fênix.
+					<li>&nbsp;&nbsp;&nbsp;O motivo pelo qual o então sistema UNICS teve seu nome alterado para UNIX (há várias versões) segundo a Bell Labs é que com a falha nas vendas e no próprio sistema UNICS, o UNIX ressurgiu das cinzas assim como a "Fênix" por isso o nome, dada a semehança com o fonema da palavra Fênix.
 					</li>
 				</div>
-				<div class="sugestoes"><img id="sug" src="imagens/sugestoes.gif"><b>Sugestoes:</b>
-				<br><i>Sugestoes de artigos para acrescimo de conteudo</i><br>
+				<div class="sugestoes"><img id="sug" src="imagens/sugestoes.gif"><b>Sugestões:</b>
+				<br><i>Sugestões de artigos para acréscimo de conteúdo</i><br>
 				<ul>
-					<li>Um artigo semelhante ao que se encontra  neste site mas que trata mais da parte historica(UNICAMP):&nbsp;<a href="ftp://ftp.dca.fee.unicamp.br/pub/docs/vonzuben/ea869_1s04/UNIX.pdf" title="pdf.unicamp">UNIX:&nbsp;Uma Breve Introdução</a></li>
-					<li>Pra você que não compreendeu muito bem a parte do artigo sobre gerencias:<br>
-					Gerencia de processador:&nbsp;<a href="http://www.esj.eti.br/INED/FSO/FSO_Unidade_03_003.pdf" title="Gerencia de Processador">EJS</a><br>
-					Gerencia de Memoria:&nbsp;<a href="http://www.inf.ufes.br/~zegonc/material/Sistemas%20Operacionais/Gerencia%20de%20Memoria%20(1).pdf" title="Gerencia de Memoria">UFES</a><br>
-					Gerencia de E/S:&nbsp;<a href="http://www.metropoledigital.ufrn.br/aulas/disciplinas/sist_operacional/aula_08.html" title="Gerencia de E/S">UFRN</a><br>
+					<li>Um artigo semelhante ao que se encontra  neste site mas que trata mais da parte histórica(UNICAMP):&nbsp;<a href="ftp://ftp.dca.fee.unicamp.br/pub/docs/vonzuben/ea869_1s04/UNIX.pdf" title="pdf.unicamp">UNIX:&nbsp;Uma Breve Introdução</a></li>
+					<li>Pra você que não compreendeu muito bem a parte do artigo sobre gerências:<br>
+					Gerência de processador:&nbsp;<a href="http://www.esj.eti.br/INED/FSO/FSO_Unidade_03_003.pdf" title="Gerencia de Processador">EJS</a><br>
+					Gerência de Memoria:&nbsp;<a href="http://www.inf.ufes.br/~zegonc/material/Sistemas%20Operacionais/Gerencia%20de%20Memoria%20(1).pdf" title="Gerencia de Memoria">UFES</a><br>
+					Gerência de E/S:&nbsp;<a href="http://www.metropoledigital.ufrn.br/aulas/disciplinas/sist_operacional/aula_08.html" title="Gerencia de E/S">UFRN</a><br>
 					Sistema de Arquivos:&nbsp;<a href="http://www.inf.ufes.br/~zegonc/material/Sistemas%20Operacionais/Sistema%20de%20Arquivos%20(1).pdf" title="Sistema de Arquivos">UFES</a><br>
 					</li>
 				</ul>
@@ -75,7 +85,7 @@
 				</div>
 				<div class="downloads"><img id="dow" src="imagens/down.png"><b>Downloads:</b>
 					<ul>
-						<i>Esperimente outras versoes open baseadas no sistema UNIX:</i>
+						<i>Esperimente outras versões open baseadas no sistema UNIX:</i>
 						<li>MINIX:&nbsp;<a href="http://download.minix3.org/iso/minix_R3.2.1-972156d.iso.bz2" title="Minix"><img src="imagens/baixar.png" height="4%" width="4%" alt="MINIX"></a></li>
 						<li>BSD:&nbsp;<a href="ftp://ftp.freebsd.org/pub/FreeBSD/releases/amd64/amd64/ISO-IMAGES/9.2/FreeBSD-9.2-RELEASE-amd64-dvd1.iso" title="Free BSD"><img src="imagens/baixar.png" height="4%" width="4%"></a></li>
 						<li>UBUNTU:&nbsp;<a href="http://releases.ubuntu.com/raring/ubuntu-13.04-desktop-i386.iso" title="UBUNTU"><img src="imagens/baixar.png" height="4%" width="4%"></a>
