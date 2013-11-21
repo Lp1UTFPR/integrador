@@ -1,8 +1,15 @@
 function comando(){
   var novocampo = document.getElementById("novocampo");
   var mensagem, cmd=document.getElementById("dados");
+  var keycode;
 
-  if( event.keyCode == 13)
+   try {
+      keycode = event.keyCode;
+   }catch(e){
+      keycode = e.which;
+   }
+
+  if(keycode == 13)
   {
     if (cmd.value == "ls" || cmd.value=="LS" )
     {
