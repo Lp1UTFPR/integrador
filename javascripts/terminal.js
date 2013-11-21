@@ -5,7 +5,7 @@ function comando(){
 
    try {
       keycode = event.keyCode;
-   }catch(e){
+   }catch(err){
       keycode = e.which;
    }
 
