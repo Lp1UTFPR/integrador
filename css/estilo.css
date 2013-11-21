@@ -2,8 +2,7 @@
 body{
 	margin: 0px;
 	background: #6e6e6e;
-	font-family: verdana;
-	
+	font-family: verdana;	
 }
 
 #topo{
@@ -403,10 +402,12 @@ h2{
 	border:solid;
 	border-color: gray;	
 }
+
 #icones{
 	text-align: center;
 	height: 20%;
 }
+
 .botao{
 	border-style: outset;
 	border-color: gray;
@@ -415,6 +416,7 @@ h2{
 	height: 12%;
 	margin-left: 0.3%;			
 }
+
 #topo{
 	width: auto;	
 }
@@ -422,9 +424,11 @@ h2{
 .gerencias{
 	margin-left: 13%;
 }
+
 h5{
 	text-align: center;
 }
+
 #fundo{
 	margin-top: -50px;
 }
